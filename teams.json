@@ -1,142 +1,113 @@
 {
+    "organisation": "worms",
     "teams": [
         {
             "name": "Team A",
             "mission": "Team A does things",
-            "backlog": "worms/TeamA",
-            "current_sprint": "Increasing snow plowed in each plow by 10%",
-            "team_members": [
+            "current_work": [
+                "Increasing snow plowed in each plow by 10%"
+            ],
+            "teams_working_with": [
+                "Team B",
+                "Team C"
+            ],
+            "backlog": {
+                "name": "Team A",
+                "links": "xxxx/worms/TeamA"
+            },
+            "communications": [
+                {
+                    "medium": "Email",
+                    "channels": [
+                        {
+                            "name": "TeamB@worms.com",
+                            "link": ""
+                        }
+                    ]
+                },
+                {
+                    "medium": "Slack",
+                    "channels": [
+                        {
+                            "name": "#teamb",
+                            "link": ""
+                        },
+                        {
+                            "name": "#teamb-support",
+                            "link": ""
+                        }
+                    ]
+                }
+            ],
+            "members": [
                 {
                     "name": "Cartmam",
-                    "role": [
+                    "roles": [
                         "Product Owner",
                         "Analyst"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
                     ]
                 },
                 {
                     "name": "Kyle",
-                    "role": [
+                    "roles": [
                         "Scrum Master"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
                     ]
                 },
                 {
                     "name": "Stan",
-                    "role": [
+                    "roles": [
                         "Technical Lead",
                         "Engineer"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
                     ]
                 },
                 {
                     "name": "Kyle",
-                    "role": [
+                    "roles": [
                         "Engineer",
                         "Scrum Master"
-                    ]
-                }
-            ],
-            "communication_channels": [
-                {
-                    "medium": "email",
-                    "channel": [
-                        "TeamA@worms.com"
-                    ]
-                },
-                {
-                    "medium": "slack",
-                    "channel": [
-                        "#teama",
-                        "#teama-support"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
                     ]
                 }
             ],
             "services": [
                 {
-                    "name": "Snow Plow",
-                    "purpose": "Remove snow",
-                    "customers": [
-                        "Team B",
-                        "Team C"
-                    ],
-                    "sla": "Within an hour of snow"
-                },
-                {
-                    "name": "Randys Farm",
-                    "purpose": "Supply weed",
-                    "customers": [
-                        "Team B",
-                        "Website Customers"
-                    ],
-                    "sla": "Daily to subscribers"
-                }
-            ]
-        },
-        {
-            "name": "Team B",
-            "mission": "Team B does other things",
-            "backlog": "worms/TeamB",
-            "current_sprint": "Increasing aliens killed in each skirmish by 10%",
-            "team_members": [
-                {
-                    "name": "Hicks",
-                    "role": [
-                        "Product Owner",
-                        "Analyst"
-                    ]
-                },
-                {
-                    "name": "Hudson",
-                    "role": [
-                        "Scrum Master"
-                    ]
-                },
-                {
-                    "name": "Vasquez",
-                    "role": [
-                        "Technical Lead",
-                        "Engineer"
-                    ]
-                },
-                {
-                    "name": "Drake",
-                    "role": [
-                        "Engineer",
-                        "Scrum Master"
-                    ]
-                }
-            ],
-            "communication_channels": [
-                {
-                    "medium": "email",
-                    "channel": [
-                        "TeamB@worms.com"
-                    ]
-                },
-                {
-                    "medium": "slack",
-                    "channel": [
-                        "#teamb",
-                        "#teamb-support"
-                    ]
-                }
-            ],
-            "services": [
-                {
-                    "name": "Grenade Launcher",
+                    "name": "Service A",
                     "purpose": "Blows up Aliens",
+                    "sla": "Real-time",
                     "customers": [
                         "Team B",
                         "Team C"
-                    ],
-                    "sla": "Real-time"
+                    ]
                 },
                 {
-                    "name": "Marine Deployment",
+                    "name": "Service B",
                     "purpose": "Remove aliens from colonies",
+                    "sla": "Daily to subscribers",
                     "customers": [
                         "Team B",
                         "Website Customers"
                     ],
-                    "sla": "Daily to subscribers"
+                    "codebase": [
+                        {
+                            "name": "Service B",
+                            "readme": "xxxx/serviceb/readme.md"
+                        }
+                    ]
                 }
             ]
         }

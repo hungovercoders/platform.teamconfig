@@ -1,0 +1,144 @@
+{
+    "teams": [
+        {
+            "name": "Team A",
+            "mission": "Team A does things",
+            "backlog": "worms/TeamA",
+            "current_sprint": "Increasing snow plowed in each plow by 10%",
+            "team_members": [
+                {
+                    "name": "Cartmam",
+                    "role": [
+                        "Product Owner",
+                        "Analyst"
+                    ]
+                },
+                {
+                    "name": "Kyle",
+                    "role": [
+                        "Scrum Master"
+                    ]
+                },
+                {
+                    "name": "Stan",
+                    "role": [
+                        "Technical Lead",
+                        "Engineer"
+                    ]
+                },
+                {
+                    "name": "Kyle",
+                    "role": [
+                        "Engineer",
+                        "Scrum Master"
+                    ]
+                }
+            ],
+            "communication_channels": [
+                {
+                    "medium": "email",
+                    "channel": [
+                        "TeamA@worms.com"
+                    ]
+                },
+                {
+                    "medium": "slack",
+                    "channel": [
+                        "#teama",
+                        "#teama-support"
+                    ]
+                }
+            ],
+            "services": [
+                {
+                    "name": "Snow Plow",
+                    "purpose": "Remove snow",
+                    "customers": [
+                        "Team B",
+                        "Team C"
+                    ],
+                    "sla": "Within an hour of snow"
+                },
+                {
+                    "name": "Randys Farm",
+                    "purpose": "Supply weed",
+                    "customers": [
+                        "Team B",
+                        "Website Customers"
+                    ],
+                    "sla": "Daily to subscribers"
+                }
+            ]
+        },
+        {
+            "name": "Team B",
+            "mission": "Team B does other things",
+            "backlog": "worms/TeamB",
+            "current_sprint": "Increasing aliens killed in each skirmish by 10%",
+            "team_members": [
+                {
+                    "name": "Hicks",
+                    "role": [
+                        "Product Owner",
+                        "Analyst"
+                    ]
+                },
+                {
+                    "name": "Hudson",
+                    "role": [
+                        "Scrum Master"
+                    ]
+                },
+                {
+                    "name": "Vasquez",
+                    "role": [
+                        "Technical Lead",
+                        "Engineer"
+                    ]
+                },
+                {
+                    "name": "Drake",
+                    "role": [
+                        "Engineer",
+                        "Scrum Master"
+                    ]
+                }
+            ],
+            "communication_channels": [
+                {
+                    "medium": "email",
+                    "channel": [
+                        "TeamB@worms.com"
+                    ]
+                },
+                {
+                    "medium": "slack",
+                    "channel": [
+                        "#teamb",
+                        "#teamb-support"
+                    ]
+                }
+            ],
+            "services": [
+                {
+                    "name": "Grenade Launcher",
+                    "purpose": "Blows up Aliens",
+                    "sla": "Real-time",
+                    "customers": [
+                        "Team B",
+                        "Team C"
+                    ]
+                },
+                {
+                    "name": "Marine Deployment",
+                    "purpose": "Remove aliens from colonies",
+                    "sla": "Daily to subscribers",
+                    "customers": [
+                        "Team B",
+                        "Website Customers"
+                    ]
+                }
+            ]
+        }
+    ]
+}
