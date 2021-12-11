@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+         "type": "object",
+         "description": "Teams in a company",
+         "properties": {
+             "teams": {
+               "type": "array",
+               "items": { "$ref": "#/$defs/teams" }
+               },
+       "$defs": {
+       "team": {
+         "type": "object",
+         "required": [ "name", "description" ],
+         "properties": {
+           "name": {
+             "type": "string",
+             "description": "The name of the team."
+           },
+           "mission": {
+             "type": "string",
+             "description": "The mission of the team."
+           }
+         }
+       }
+     }
+   }
+}
