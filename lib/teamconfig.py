@@ -16,13 +16,3 @@ def validate_schema(json_data, json_schema):
     except jsonschema.exceptions.ValidationError as err:
         print(f"Unexpected {err}, {type(err)}")
         raise
-
-data_file = 'teams.json'
-schema_file = 'teams.schema.json'
-json_schema = get_json_file(schema_file)
-json_data = get_json_file(data_file)
-validate_schema(json_data=json_data,json_schema=json_schema)
-
-print(json.dumps(json_data,indent=4))
-
-data = json.load(json_data)
