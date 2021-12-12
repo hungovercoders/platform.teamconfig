@@ -157,9 +157,9 @@
             ],
             "members": [
                 {
-                    "name": "Cartmam",
+                    "name": "Hicks",
                     "roles": [
-                       
+                       "Product Owner",
                         "Analyst"
                     ],
                     "skills": [
@@ -168,7 +168,7 @@
                     ]
                 },
                 {
-                    "name": "Kyle",
+                    "name": "Hudson",
                     "roles": [
                         "Scrum Master"
                     ],
@@ -178,7 +178,7 @@
                     ]
                 },
                 {
-                    "name": "Stan",
+                    "name": "Vasquez",
                     "roles": [
                         "Technical Lead",
                         "Engineer"
@@ -189,7 +189,7 @@
                     ]
                 },
                 {
-                    "name": "Kyle",
+                    "name": "Drake",
                     "roles": [
                         "Engineer",
                         "Scrum Master"
