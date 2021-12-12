@@ -31,7 +31,7 @@ venv\scripts\activate
 Schema validation passed.
 ```
 
-### How to Generate Docuementation
+### How to Generate Documentation
 
 * Within your virtual python environment, open a terminal and run [app/generate_docs.py](app/generate_docs.py). This will replace the html found in [docs/docs.html](docs/docs.html) with the current teams configuration.
 
