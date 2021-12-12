@@ -24,7 +24,7 @@ venv\scripts\activate
 
 ### How to Validate Teams Schema
 
-* Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and return the message "Schema validation passed.
+* Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and return the message "Schema validation passed".
 
 ```
 (venv) D:\repos\teamconfig>app\validate.py      
@@ -33,7 +33,7 @@ Schema validation passed.
 
 ### How to Generate Documentation
 
-* Within your virtual python environment, open a terminal and run [app/generate_docs.py](app/generate_docs.py). This will replace the html found in [docs/docs.html](docs/docs.html) with the current teams configuration.
+* Within your virtual python environment, open a terminal and run [app/generate_docs.py](app/generate_docs.py). This will replace the html found in [docs/docs.html](docs/docs.html) with the current teams configuration. It should produce no errors and return the message "Docs created in docs/docs.html".
 
 ```
 (venv) D:\repos\teamconfig>app\generate_docs.py 
