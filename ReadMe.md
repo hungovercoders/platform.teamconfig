@@ -40,8 +40,7 @@ Schema validation passed.
 Docs created in docs/docs.html
 ```
 
-To preview this on github itself you can use [https://htmlpreview.github.io/](https://htmlpreview.github.io/) and enter the URl, or just click the link below to see the current example in this repo.
-[https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/docs.html](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/docs.html).
+To preview this on github itself you can use [htmlpreview](https://htmlpreview.github.io/) for github.io and enter the URL, or just click the link below to see the current example in this [repo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/docs.html).
 
 ### How to Add Teams
 
