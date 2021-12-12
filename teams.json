@@ -3,7 +3,7 @@
     "teams": [
         {
             "name": "Team C",
-            "mission": "Team A does things",
+            "mission": "Team C does things",
             "current_work": [
                 "Increasing snow plowed in each plow by 10%"
             ],
