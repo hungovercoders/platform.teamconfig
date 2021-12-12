@@ -2,25 +2,25 @@
     "organisation": "worms",
     "teams": [
         {
-            "name": "Team A",
+            "name": "Team C",
             "mission": "Team A does things",
             "current_work": [
                 "Increasing snow plowed in each plow by 10%"
             ],
             "teams_working_with": [
-                "Team B",
-                "Team C"
+                "Team A",
+                "Team B"
             ],
             "backlog": {
-                "name": "Team A",
-                "links": "xxxx/worms/TeamA"
+                "name": "Team C",
+                "links": "xxxx/worms/TeamC"
             },
             "communications": [
                 {
                     "medium": "Email",
                     "channels": [
                         {
-                            "name": "TeamB@worms.com",
+                            "name": "TeamC@worms.com",
                             "link": ""
                         }
                     ]
@@ -29,11 +29,11 @@
                     "medium": "Slack",
                     "channels": [
                         {
-                            "name": "#teamb",
+                            "name": "#teamc",
                             "link": ""
                         },
                         {
-                            "name": "#teamb-support",
+                            "name": "#teamc-support",
                             "link": ""
                         }
                     ]
@@ -87,16 +87,22 @@
             "services": [
                 {
                     "name": "Service A",
-                    "purpose": "Blows up Aliens",
+                    "purpose": "Snow Plow",
                     "sla": "Real-time",
                     "customers": [
                         "Team B",
-                        "Team C"
+                        "Team A"
+                    ],
+                    "codebase": [
+                        {
+                            "name": "Service A",
+                            "readme": "xxxx/servicea/readme.md"
+                        }
                     ]
                 },
                 {
                     "name": "Service B",
-                    "purpose": "Remove aliens from colonies",
+                    "purpose": "Randys Weed",
                     "sla": "Daily to subscribers",
                     "customers": [
                         "Team B",
@@ -106,6 +112,122 @@
                         {
                             "name": "Service B",
                             "readme": "xxxx/serviceb/readme.md"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Team A",
+            "mission": "Team A does things",
+            "current_work": [
+                "Kill more aliens in each skirmish by 10%"
+            ],
+            "teams_working_with": [
+                "Team C",
+                "Team B"
+            ],
+            "backlog": {
+                "name": "Team A",
+                "links": "xxxx/worms/TeamA"
+            },
+            "communications": [
+                {
+                    "medium": "Email",
+                    "channels": [
+                        {
+                            "name": "TeamA@worms.com",
+                            "link": ""
+                        }
+                    ]
+                },
+                {
+                    "medium": "Slack",
+                    "channels": [
+                        {
+                            "name": "#teama",
+                            "link": ""
+                        },
+                        {
+                            "name": "#teama-support",
+                            "link": ""
+                        }
+                    ]
+                }
+            ],
+            "members": [
+                {
+                    "name": "Cartmam",
+                    "roles": [
+                       
+                        "Analyst"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
+                    ]
+                },
+                {
+                    "name": "Kyle",
+                    "roles": [
+                        "Scrum Master"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
+                    ]
+                },
+                {
+                    "name": "Stan",
+                    "roles": [
+                        "Technical Lead",
+                        "Engineer"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
+                    ]
+                },
+                {
+                    "name": "Kyle",
+                    "roles": [
+                        "Engineer",
+                        "Scrum Master"
+                    ],
+                    "skills": [
+                        "C#",
+                        "Data Science"
+                    ]
+                }
+            ],
+            "services": [
+                {
+                    "name": "Service C",
+                    "purpose": "Blows up Aliens",
+                    "sla": "Real-time",
+                    "customers": [
+                        "Team B",
+                        "Team C"
+                    ],
+                    "codebase": [
+                        {
+                            "name": "Service C",
+                            "readme": "xxxx/servicec/readme.md"
+                        }
+                    ]
+                },
+                {
+                    "name": "Service D",
+                    "purpose": "Remove aliens from colonies",
+                    "sla": "Daily to subscribers",
+                    "customers": [
+                        "Team B",
+                        "Website Customers"
+                    ],
+                    "codebase": [
+                        {
+                            "name": "Service D",
+                            "readme": "xxxx/serviced/readme.md"
                         }
                     ]
                 }
