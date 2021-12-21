@@ -82,7 +82,8 @@
             ],
             "properties": {
                 "name": {
-                    "$ref": "#/$defs/teamname_list"
+                    "$ref": "#/$defs/teamname_list",
+                    "description": "The name of the team which should also be used in tagging resources for ownership identification"
                 },
                 "mission": {
                     "type": "string",
@@ -130,6 +131,7 @@
         },
         "member": {
             "type": "object",
+            "description": "Team member information",
             "required": [
                 "name",
                 "roles",
@@ -182,6 +184,7 @@
         },
         "communication": {
             "type": "object",
+            "description" : "Methods of communication with the team",
             "required": [
                 "medium",
                 "channels"
@@ -219,6 +222,7 @@
         },
         "product": {
             "type": "object",
+            "description":"A product supplied by this team",
             "required": [
                 "name",
                 "purpose",

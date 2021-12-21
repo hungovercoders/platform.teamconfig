@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "description": "Teams in an organisation",
+    "properties": {
+        "organisation": {
+            "type": "string",
+            "description": "The organisation the teams belong to.",
+            "enum": [
+                "teamconfig"
+            ]
+        },
+        "teams": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/team"
+            }
+        }
+    }
+}
