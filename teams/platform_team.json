@@ -1,0 +1,114 @@
+{
+    "overview": {
+        "name": "Platform",
+        "mission": "Providing reliable shared infrastructure and repeatable deployment pipelines to improve value stream engineering throughput.",
+        "current_work": [
+            "Investigating suitable event broker technologies",
+            "Creating common templates for storage containers"
+        ],
+        "teams_working_with": [
+            "CRM",
+            "Conversions"
+        ],
+        "homepage": "<a href=''>Homepage</a>",
+        "backlog": "<a href='https://github.com/griff182uk/teamconfig/issues?q=is%3Aopen+is%3Aissue+project%3Agriff182uk%2Fteamconfig%2F1'>Backlog</a>",
+        "wiki": "<a href='https://github.com/griff182uk/teamconfig/wiki/example-platform-wiki'>Wiki</a>",
+        "calendar": "<a href=''>Calendar</a>"
+    },
+    "communications": [
+        {
+            "medium": "Email",
+            "channels": [
+                "<a href=''>platform-team@teamconfig.com</a>",
+                "<a href=''>platform-team-support@teamconfig.com</a>"
+            ]
+        },
+        {
+            "medium": "Slack",
+            "channels": [
+                "<a href='https://example-teamconfig.slack.com/archives/C02RFF8BPQU'>platform-team</a>",
+                "<a href='https://example-teamconfig.slack.com/archives/C02RRRQCM5F'>platform-support</a>",
+                "<a href='https://example-teamconfig.slack.com/archives/C02RD6K7B34'>platform-status-dev</a>",
+                "<a href='https://example-teamconfig.slack.com/archives/C02S2V9JRQ8'>platform-status-live</a>"
+            ]
+        }
+    ],
+    "members": [
+        {
+            "name": "Cartman",
+            "email": "Cartman@teamconfig.com",
+            "roles": [
+                "Product Owner",
+                "Analyst"
+            ],
+            "skills": [
+                "Powershell",
+                "SQL"
+            ]
+        },
+        {
+            "name": "Kyle",
+            "email": "kyle@teamconfig.com",
+            "roles": [
+                "Scrum Master"
+            ],
+            "skills": [
+                "Powershell"
+            ]
+        },
+        {
+            "name": "Stan",
+            "email": "stan@teamconfig.com",
+            "roles": [
+                "Technical Lead",
+                "Engineer"
+            ],
+            "skills": [
+                "Powershell",
+                "Terraform",
+                "Bicep"
+            ]
+        },
+        {
+            "name": "Kenny",
+            "email": "kenny@teamconfig.com",
+            "roles": [
+                "Engineer",
+                "Scrum Master"
+            ],
+            "skills": [
+                "Powershell",
+                "Terraform",
+                "Bicep"
+            ]
+        }
+    ],
+    "products": [
+        {
+            "name": "Event Broker",
+            "purpose": "Provide a decoupled shared message broker and immutable log for all events of the business.",
+            "sla": "99.99%",
+            "customers": [
+                "Conversions",
+                "CRM",
+                "Product"
+            ],
+            "codebase": [
+                "<a href=''>Event Broker</a>"
+            ]
+        },
+        {
+            "name": "Schema Registry",
+            "purpose": "Provide a central schema repository for applications and services to deploy their schemas to.",
+            "sla": "99.99%",
+            "customers": [
+                "Conversions",
+                "CRM",
+                "Product"
+            ],
+            "codebase": [
+                "<a href=''>Schema Registry</a>"
+            ]
+        }
+    ]
+}

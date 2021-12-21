@@ -5,7 +5,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 from lib.teamconfig import *
 
-data_file = 'teams.json'
+data_file = 'teams/platform_team.json'
 input = get_json_file(data_file)
 
 build_direction = "LEFT_TO_RIGHT"

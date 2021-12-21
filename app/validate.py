@@ -9,8 +9,8 @@ from lib.teamconfig import *
 
 # Must be schema valid
 
-data_file = 'teams.json'
-schema_file = 'teams.schema.json'
+data_file = 'teams/platform_team.json'
+schema_file = 'teams/schema/team.schema.json'
 json_schema = get_json_file(schema_file)
 json_data = get_json_file(data_file)
 validate_schema(json_data=json_data,json_schema=json_schema)
