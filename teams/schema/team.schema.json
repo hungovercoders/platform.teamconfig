@@ -109,22 +109,22 @@
                 "homepage": {
                     "type": "string",
                     "description": "This is the hompage of the team including links, status and metrics.",
-                    "pattern": "<a href=''>Homepage</a>"
+                    "pattern": "<a href='.*'>Homepage</a>"
                 },
                 "backlog": {
                     "type": "string",
                     "description": "The name and link to the backlog.",
-                    "pattern": "<a href=''>Backlog</a>"
+                    "pattern": "<a href='.*'>Backlog</a>"
                 },
                 "wiki": {
                     "type": "string",
                     "description": "This is the wiki for the team.",
-                    "pattern": "<a href=''>Wiki</a>"
+                    "pattern": "<a href='.*'>Wiki</a>"
                 },
                 "calendar": {
                     "type": "string",
                     "description": "The is the teams calendar",
-                    "pattern": "<a href=''>Calendar</a>"
+                    "pattern": "<a href='.*'>Calendar</a>"
                 }
             }
         },
@@ -170,7 +170,10 @@
                             "SQL",
                             "Python",
                             "Data Science",
-                            "Front End Development"
+                            "Front End Development",
+                            "Powershell",
+                            "Terraform",
+                            "Bicep"
                         ]
                     },
                     "uniqueItems": true
@@ -198,9 +201,18 @@
                     "description": "Channels that can be communicated on through the medium",
                     "uniqueItems": true,
                     "items": {
-                        "type": "string",
-                        "description": "Channels including link to communnicate with team",
-                        "pattern": "<a href=''>.*</a>"
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the channel including link to communnicate with team",
+                                "pattern": "<a href='.*'>.*</a>"
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "A description of the channels purpose"
+                            }
+                        }
                     }
                 }
             }
@@ -246,7 +258,7 @@
                     "items": {
                         "type": "string",
                         "description": "The name of the codebase including link.",
-                        "pattern": "<a href=''>.*</a>"
+                        "pattern": "<a href='.*'>.*</a>"
                     }
                 }
             }
