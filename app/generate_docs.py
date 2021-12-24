@@ -38,7 +38,7 @@ for file in team_files:
   
 html_main = ''
 for t in teams:
-  html_main += f"""<a href='{t}.html'>{t}</a>\n"""
+  html_main += f"""<li><a href='{t}.html'>{t}</a></li>\n"""
 
 html_main = """<!DOCTYPE html>
 <html>
