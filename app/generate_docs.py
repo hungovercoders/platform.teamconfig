@@ -46,8 +46,8 @@ html_main = """<!DOCTYPE html>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<h1>Teams</h1>
-""" + html_main + "</body>"
+<h1>Teams</h1><ul>
+""" + html_main + "</ul></body>"
 
 with open(f'docs/index.html', 'w') as f:
     f.truncate()

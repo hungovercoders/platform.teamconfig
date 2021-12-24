@@ -3,7 +3,7 @@
 This product aims to programtiallcy create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/).
 From this information and schema the goal is to validate the team setup based on business rules and also create automatic documentation.
 The schema for the teams can be found in [teams.schema.json](/teams.schema.json) and an example implementation of team in [teams.json](/teams.json).
-The example documentation this produces can be found in [docs/index.html](docs/docs.html) to see the raw html, or to see it rendered as it currently is in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html).
+The example documentation this produces can be found in [docs/index.html](docs/index.html) to see the raw html, or to see it rendered as it currently is in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html).
 
 ## Dependencies
 
