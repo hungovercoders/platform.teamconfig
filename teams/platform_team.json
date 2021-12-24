@@ -21,11 +21,11 @@
             "medium": "Email",
             "channels": [
                 {
-                    "name": "<a href=''>platform-team@teamconfig.com</a>",
+                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>platform-team@teamconfig.com</a>",
                     "description": "This is the channel for contacting the team for general discusssion"
                 },
                 {
-                    "name": "<a href=''>platform-team-support@teamconfig.com</a>",
+                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>platform-team-support@teamconfig.com</a>",
                     "description": "This is the channel for requesting assistance from the team"
                 }
             ]
