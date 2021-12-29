@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/schema#",
     "type": "object",
-    "description": "A Team in an organisation",
+    "description": "A Team in an organisation.",
     "required": [
         "overview",
         "members",
@@ -42,7 +42,7 @@
     "$defs": {
         "teamname_list": {
             "type": "string",
-            "description": "The list of team names.",
+            "description": "The list of team names. This would be the list of team names used to tag resources deployed as well.",
             "enum": [
                 "Platform",
                 "CRM",
