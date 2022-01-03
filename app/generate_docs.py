@@ -46,7 +46,9 @@ html_main = """<!DOCTYPE html>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<h1>Teams</h1><ul>
+<h1>Teams</h1>
+<p>Please click on a team below to see its details</p>
+<ul>
 """ + html_main + "</ul></body>"
 
 with open(f'docs/index.html', 'w') as f:
