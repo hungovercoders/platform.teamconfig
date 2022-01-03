@@ -175,7 +175,9 @@
                             "Front End Development",
                             "Powershell",
                             "Terraform",
-                            "Bicep"
+                            "Bicep",
+                            "HTML",
+                            "CSS"
                         ]
                     },
                     "uniqueItems": true
@@ -236,7 +238,12 @@
                     "description": "Name of the product provided",
                     "enum": [
                         "Event Broker",
-                        "Schema Registry"
+                        "Schema Registry",
+                        "Product Panel",
+                        "Sale Tracking",
+                        "Product Renewal Reminders",
+                        "Abandoned Lead Notifications",
+                        "Product Configuration Portal"
                     ]
                 },
                 "purpose": {
