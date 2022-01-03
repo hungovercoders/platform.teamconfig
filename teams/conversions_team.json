@@ -1,19 +1,18 @@
 {
     "overview": {
-        "name": "Platform",
-        "mission": "Providing reliable shared infrastructure and repeatable deployment pipelines to improve value stream engineering throughput.",
+        "name": "Conversions",
+        "mission": "Providing users with a view of products to select and track the progress of these leads through to purchase.",
         "current_work": [
-            "Investigating suitable event broker technologies",
-            "Creating common templates for storage containers"
+            "Investigating API integration with sample of partners for better sales notifications",
+            "Allowing customers to sort panel by product expiry date"
         ],
         "teams_working_with": [
             "CRM",
-            "Conversions",
-            "Prdouct"
+            "Product"
         ],
         "homepage": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/homepage.md'>Homepage</a>",
-        "backlog": "<a href='https://github.com/griff182uk/teamconfig/issues?q=is%3Aopen+is%3Aissue+project%3Agriff182uk%2Fteamconfig%2F1'>Backlog</a>",
-        "wiki": "<a href='https://github.com/griff182uk/teamconfig/wiki/example-platform-wiki'>Wiki</a>",
+        "backlog": "<a href='https://github.com/griff182uk/teamconfig/projects/3'>Backlog</a>",
+        "wiki": "<a href='https://github.com/griff182uk/teamconfig/wiki/example-conversions-wiki'>Wiki</a>",
         "calendar": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/calendar.md'>Calendar</a>"
     },
     "communications": [
@@ -21,11 +20,11 @@
             "medium": "Email",
             "channels": [
                 {
-                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>platform-team@teamconfig.com</a>",
+                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>conversions-team@teamconfig.com</a>",
                     "description": "This is the channel for contacting the team for general discusssion"
                 },
                 {
-                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>platform-team-support@teamconfig.com</a>",
+                    "name": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/email.md'>conversions-team-support@teamconfig.com</a>",
                     "description": "This is the channel for requesting assistance from the team"
                 }
             ]
@@ -34,19 +33,19 @@
             "medium": "Slack",
             "channels": [
                 {
-                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RFF8BPQU'>platform-team</a>",
+                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RRR5RQ2D'>conversions-team</a>",
                     "description": "This is the channel for intra-team chat and scrums"
                 },
                 {
-                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RRRQCM5F'>platform-support</a>",
+                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RD7FED6F'>conversions-support</a>",
                     "description": "This is the channel for anyone outside the team requiring support from this team"
                 },
                 {
-                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RD6K7B34'>platform-status-dev</a>",
+                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RA866MRT'>conversions-status-dev</a>",
                     "description": "This is the channel for posting development deployments and any alerts"
                 },
                 {
-                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02S2V9JRQ8'>platform-status-live</a>",
+                    "name": "<a href='https://example-teamconfig.slack.com/archives/C02RRR7PSPK'>conversions-status-live</a>",
                     "description": "This is the channel for posting production deployments, any alerts and for raising on-call issues manually"
                 }
             ]
@@ -54,79 +53,81 @@
     ],
     "members": [
         {
-            "name": "Cartman",
-            "email": "Cartman@teamconfig.com",
+            "name": "Hicks",
+            "email": "hicks@teamconfig.com",
             "roles": [
                 "Product Owner",
                 "Analyst"
             ],
             "skills": [
-                "Powershell",
+                "HTML",
+                "CSS",
                 "SQL"
             ]
         },
         {
-            "name": "Kyle",
-            "email": "kyle@teamconfig.com",
+            "name": "Hudson",
+            "email": "hudson@teamconfig.com",
             "roles": [
                 "Scrum Master"
             ],
             "skills": [
-                "Powershell"
+                "HTML",
+                "CSS",
+                "C#"
             ]
         },
         {
-            "name": "Stan",
-            "email": "stan@teamconfig.com",
+            "name": "Vasquez",
+            "email": "vasquex@teamconfig.com",
             "roles": [
                 "Technical Lead",
                 "Engineer"
             ],
             "skills": [
+                "HTML",
+                "CSS",
+                "C#",
                 "Powershell",
-                "Terraform",
-                "Bicep"
+                "Terraform"
             ]
         },
         {
-            "name": "Kenny",
-            "email": "kenny@teamconfig.com",
+            "name": "Vasquez",
+            "email": "vasquex@teamconfig.com",
             "roles": [
-                "Engineer",
-                "Scrum Master"
+                "Technical Lead",
+                "Engineer"
             ],
             "skills": [
-                "Powershell",
-                "Terraform",
-                "Bicep"
+                "HTML",
+                "CSS",
+                "C#",
+                "Powershell"
             ]
         }
     ],
     "products": [
         {
-            "name": "Event Broker",
-            "purpose": "Provide a decoupled shared message broker and immutable log for all events of the business.",
+            "name": "Product Panel",
+            "purpose": "Provides a product panel for customers to select a lead from.",
             "sla": "99.99%",
             "customers": [
-                "Conversions",
-                "CRM",
-                "Product"
+                "Website Customers"
             ],
             "codebase": [
-                "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Event Broker</a>"
+                "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Product Panel</a>"
             ]
         },
         {
-            "name": "Schema Registry",
-            "purpose": "Provide a central schema repository for applications and services to deploy their schemas to.",
+            "name": "Sale Tracking",
+            "purpose": "Notifies the business of when a lead has been succesful.",
             "sla": "99.99%",
             "customers": [
-                "Conversions",
-                "CRM",
-                "Product"
+                "CRM"
             ],
             "codebase": [
-                "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Schema Registry</a>"
+                "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Sale Tracking</a>"
             ]
         }
     ]
