@@ -22,9 +22,9 @@ for file in team_files:
   print(f"Validating {file}...")
   validate_schema(json_data=json_data,json_schema=json_schema)
   print(f"Validated {file}.")
-# Must have a PO, Scrum Master and Technical Lead
 
-# Team members must only be in one team
+# TODO - Must have a PO, Scrum Master and Technical Lead
 
+# TODO - Team members must only be in one team
 
 print("Schema validation passed")

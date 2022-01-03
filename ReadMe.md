@@ -1,3 +1,14 @@
+- [Description](#description)
+- [Example Team Implementation](#example-team-implementation)
+- [Example Communication Strategy](#example-communication-strategy)
+- [Dependencies](#dependencies)
+- [Guide](#guide)
+  - [How to Validate Teams Schema](#how-to-validate-teams-schema)
+  - [How to Generate Documentation](#how-to-generate-documentation)
+  - [How to Add Teams](#how-to-add-teams)
+  - [How to Amend Schema](#how-to-amend-schema)
+  - [How to Style Documentation](#how-to-style-documentation)
+
 ## Description
 
 This product aims to programtically create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/).
@@ -5,18 +16,51 @@ From this information and schema the goal is to validate the team setup based on
 The schema for the teams can be found in [team.schema.json](/teams/schema/team.schema.json) and an example implementation of team in [conversions_team.json](/teams/conversions_team.json).
 The example documentation this produces can be found in [docs/index.html](docs/index.html) to see the raw html, or to see it rendered as it currently is in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html).
 
+## Example Team Implementation
+
+The example team implementation was extracted from performing a simulated event storming exercise on a fictional company that simply:
+
+- Activates Users
+- Configures Products
+- Generates Leads
+- Evaluates Offline Purchases
+The outcome of this event storming exercise was carried out in Miro and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template.
+This is purely fictional for an example implementation and your teams and bounded context setup would require much further thought and design. For further information on event storming please see [here](https://www.eventstorming.com/) or on domain driven design see [here](https://martinfowler.com/bliki/DomainDrivenDesign.html). Once you have the outcomes from these though the principal of the team API setup proposed in this codebase should still hold true.
+
+## Example Communication Strategy
+
+The schema proposes a fairly standard communication strategy setup which is consistent throughout. It aims to prevent proliferation and confusing communication structures being implemented when a business is well known. It also aims to reduce on-call or intra-team noise by dedicating channels to specific purposes and environments.
+
+Applies to both e-mail and messenger medium (e.g. slack, teams)
+
+- **{teamname}-team**: For e-mail this would be for regular communications and notifications this team requires. In your messenger tool of choice this channel would be restricted to only the team members and the only channel to actually be private. The goal here is not to hide the communications but reduce noise for intra-team communications and allow for scrum communications etc.
+- **{teamname}-team-support**: For e-mail this would be for requesting support by customers for the products and services the team maintains. In your messenger tool of choice this channel would be open to all.
+
+Applies to only messenger medium (e.g. slack, teams)
+
+- **{teamname}-team-dev**: In the messenger channel this would be for development environment deploy notifications, development environment alerts and also for anyone to manually raise issues in the test environments for this team.
+- **{teamname}-team-support-live**: In the messenger channel this would be for live environment deploy notifications, live environment alerts and also for anyone to manually raise issues in the live environments for this team. **This would be a channel that oncall would be integrated with.**
+
+While the aspiration is to be able to localise the noise created by deployments and alerting, there will be instances during emergencies where the issue may be difficult to localise and diagnose requiring everyone who can help, to help. In these cases the following two channels can be used:
+
+- **call-to-arms-live** - The channel for live issues requiring everyones attention to resolve. **This would be a channel that oncall would be integrated with.**
+- **call-to-arms-dev** - The channel for development issues requiring everyones attention to resolve.
+
+An example implementation in slack of what this would look like can be seen below:
+<img src="img/slack.png"/>
+
 ## Dependencies
 
-* Pyton Installation
-* [json2table](https://pypi.org/project/json2table/)
-* [jsonschema](https://pypi.org/project/jsonschema/)
+- Pyton Installation
+- [json2table](https://pypi.org/project/json2table/)
+- [jsonschema](https://pypi.org/project/jsonschema/)
 
 ## Guide
 
 To perform any of the actions below using the python code in this repo:
 
-* Clone the repo to your machine.
-* Activate the virtual python environment.
+- Clone the repo to your machine.
+- Activate the virtual python environment.
 
 ```bash
 venv\scripts\activate
@@ -24,7 +68,7 @@ venv\scripts\activate
 
 ### How to Validate Teams Schema
 
-* Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and return the message "Schema validation passed".
+- Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and return the message "Schema validation passed".
 
 ```
 (venv) D:\repos\teamconfig>app\validate.py      
@@ -33,7 +77,7 @@ Schema validation passed.
 
 ### How to Generate Documentation
 
-* Within your virtual python environment, open a terminal and run [app/generate_docs.py](app/generate_docs.py). This will replace the html found in [docs](/docs) with the current teams configuration. It should produce no errors and return the message "Docs created in docs/docs/{team}_team.html and finally "Docs created in docs/index.html".
+- Within your virtual python environment, open a terminal and run [app/generate_docs.py](app/generate_docs.py). This will replace the html found in [docs](/docs) with the current teams configuration. It should produce no errors and return the message "Docs created in docs/docs/{team}_team.html and finally "Docs created in docs/index.html".
 
 ```
 (venv) D:\repos\teamconfig>app\generate_docs.py 
@@ -48,8 +92,47 @@ To preview this on github itself you can use this [example](https://htmlpreview.
 
 ### How to Add Teams
 
-To add a team you need to add information to a team to this folder, following an example of a team already present, that meets the schema schema provided here. 
+To add a team you need to add information to a team to this folder, following an example of a team already present, that meets the schema schema provided here.
 Once you have added a team you should [validate](#how-to-validate-teams-schema) the teams against the schema again to ensure no rules have been broken.
+
+### How to Amend Schema
+
+You may need to amend the [schema](/teams/schema/team.schema.json)) to meet local needs, particularly the values available in the lookups for different properties.
+For example you may get a a validation failure as follows:
+
+```
+Unexpected 'Product Configuration Portal' is not one of ['Event Broker', 'Schema Registry', 'Product Panel', 'Sale Tracking', 'Product Renewal Reminders', 'Abandoned Lead Notifications']
+Failed validating 'enum' in schema['properties']['products']['items']['properties']['name']:
+    {'description': 'Name of the product provided',
+     'enum': ['Event Broker',
+              'Schema Registry',
+              'Product Panel',
+              'Sale Tracking',
+              'Product Renewal Reminders',
+              'Abandoned Lead Notifications'],
+     'type': 'string'}
+```
+
+Which will mean you will need to add the appropriate product to the list in the [schema](/teams/schema/team.schema.json) as below.
+
+```json
+       "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "Name of the product provided",
+                    "enum": [
+                        "Event Broker",
+                        "Schema Registry",
+                        "Product Panel",
+                        "Sale Tracking",
+                        "Product Renewal Reminders",
+                        "Abandoned Lead Notifications",
+                        "Product Configuration Portal"
+                    ]
+                },
+```
+
+You can take this approach to any of the enums you may need to add to the schema or any other schema amendments you may need to apply.
 
 ### How to Style Documentation
 
