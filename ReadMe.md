@@ -39,7 +39,7 @@ Applies to both e-mail and messenger medium (e.g. slack, teams)
 Applies to only messenger medium (e.g. slack, teams)
 
 - **{teamname}-team-dev**: In the messenger channel this would be for development environment deploy notifications, development environment alerts and also for anyone to manually raise issues in the test environments for this team.
-- **{teamname}-team-support-live**: In the messenger channel this would be for live environment deploy notifications, live environment alerts and also for anyone to manually raise issues in the live environments for this team. **This would be a channel that oncall would be integrated with.**
+- **{teamname}-team-live**: In the messenger channel this would be for live environment deploy notifications, live environment alerts and also for anyone to manually raise issues in the live environments for this team. **This would be a channel that oncall would be integrated with.**
 
 While the aspiration is to be able to localise the noise created by deployments and alerting, there will be instances during emergencies where the issue may be difficult to localise and diagnose requiring everyone who can help, to help. In these cases the following two channels can be used:
 
