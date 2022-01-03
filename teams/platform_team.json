@@ -55,7 +55,7 @@
     "members": [
         {
             "name": "Cartman",
-            "email": "Cartman@teamconfig.com",
+            "email": "cartman@teamconfig.com",
             "roles": [
                 "Product Owner",
                 "Analyst"
