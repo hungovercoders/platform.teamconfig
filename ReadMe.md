@@ -24,7 +24,8 @@ The example team implementation was extracted from performing a simulated event 
 - Configures Products
 - Generates Leads
 - Evaluates Offline Purchases
-The outcome of this event storming exercise was carried out in Miro and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template.
+
+The outcome of this event storming exercise was carried out in [Miro](https://miro.com) and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template.
 This is purely fictional for an example implementation and your teams and bounded context setup would require much further thought and design. For further information on event storming please see [here](https://www.eventstorming.com/) or on domain driven design see [here](https://martinfowler.com/bliki/DomainDrivenDesign.html). Once you have the outcomes from these though the principal of the team API setup proposed in this codebase should still hold true.
 
 ## Example Communication Strategy
