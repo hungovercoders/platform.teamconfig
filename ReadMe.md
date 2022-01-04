@@ -45,7 +45,7 @@ This is purely fictional for an example implementation and anything like this sh
 
 ## Example Communication Strategy
 
-The schema proposes a fairly standard communication strategy setup which is consistent throughout. It aims to prevent proliferation and confusing communication structures being implemented when a business is well known. It also aims to reduce on-call or intra-team noise by dedicating channels to specific purposes and environments.
+The schema proposes a fairly standard communication strategy setup which is consistent throughout. It aims to prevent proliferation and confusing communication structures being implemented when a business is well known. It also aims to reduce on-call or intra-team noise by dedicating channels to specific purposes and environments. Below is an example implementation that you may want to adjust for your organisation, the point is that you should establish some form of communication strategy which will help your organisation whilst also helping consistency in the team schema.
 
 Applies to both e-mail and messenger medium (e.g. slack, teams)
 
