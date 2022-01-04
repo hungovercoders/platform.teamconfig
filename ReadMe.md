@@ -123,10 +123,10 @@ Once you have added a team you should [validate](#how-to-validate-teams-schema) 
 
 ### How to Amend Teams
 
-To amend a team implementation simply open the relevant file in the teams folder, then edit the properties you require ensuring that you adhere to the [schema](/teams/schema/team.schema.json). When complete again perform [validation](#how-to-validate-teams-schema)). If you need to add missing enums that are now part of your organisation please go to ["How to Amend Schema"](#how-to-amend-schema).
+To amend a team implementation simply open the relevant file in the teams folder, then edit the properties you require ensuring that you adhere to the [schema](/teams/schema/team.schema.json). When complete again perform [validation](#how-to-validate-teams-schema). If you need to add missing enums that are now part of your organisation please go to ["How to Amend Schema"](#how-to-amend-schema).
 ### How to Amend Schema
 
-You may need to amend the [schema](/teams/schema/team.schema.json)) to meet local needs, particularly the values available in the lookups for different properties.
+You may need to amend the [schema](/teams/schema/team.schema.json) to meet local needs, particularly the values available in the lookups for different properties.
 For example you may get a a validation failure as follows:
 
 ```
