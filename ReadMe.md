@@ -49,13 +49,13 @@ The schema proposes a fairly standard communication strategy setup which is cons
 
 Applies to both e-mail and messenger medium (e.g. slack, teams)
 
-- **{teamname}-team**: For e-mail this would be for regular communications and notifications this team requires. In your messenger tool of choice this channel would be restricted to only the team members and the only channel to actually be private. The goal here is not to hide the communications but reduce noise for intra-team communications and allow for scrum communications etc.
-- **{teamname}-team-support**: For e-mail this would be for requesting support by customers for the products and services the team maintains. In your messenger tool of choice this channel would be open to all.
+- **{teamname}-team**: For e-mail this would be for regular communications and notifications this team requires that they do not need to respond to. In your messenger tool of choice this channel would be restricted to only the team members and the only channel to actually be private. The goal here is not to hide the communications but reduce noise for intra-team communications and allow for scrum communications etc.
+- **{teamname}-support**: For e-mail this would be for requesting support by customers for the products and services the team maintains with the team expected to respond. In your messenger tool of choice this channel would be open to all.
 
 Applies to only messenger medium (e.g. slack, teams)
 
-- **{teamname}-team-dev**: In the messenger channel this would be for development environment deploy notifications, development environment alerts and also for anyone to manually raise issues in the test environments for this team.
-- **{teamname}-team-live**: In the messenger channel this would be for live environment deploy notifications, live environment alerts and also for anyone to manually raise issues in the live environments for this team. **This would be a channel that oncall would be integrated with.**
+- **{teamname}-dev**: In the messenger channel this would be for development environment deploy notifications, development environment alerts and also for anyone to manually raise issues in the test environments for this team.
+- **{teamname}-live**: In the messenger channel this would be for live environment deploy notifications, live environment alerts and also for anyone to manually raise issues in the live environments for this team. **This would be a channel that oncall would be integrated with.**
 
 While the aspiration is to be able to localise the noise created by deployments and alerting, there will be instances during emergencies where the issue may be difficult to localise and diagnose requiring everyone who can help, to help. In these cases the following two channels can be used:
 
