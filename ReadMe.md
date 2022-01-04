@@ -26,7 +26,7 @@ The example documentation this codebase produces can be found as raw html in [do
 
 ## Example Team Implementation
 
-The [example team implementation] in this codebase was extracted by performing a simulated event storming exercise on a fictional company that simply:
+The [example team implementation](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html) in this codebase was extracted by performing a simulated event storming exercise on a fictional company that simply:
 
 - Activates Accounts
 - Configures Products
@@ -34,7 +34,11 @@ The [example team implementation] in this codebase was extracted by performing a
 - Evaluates Offline Purchases
 - Contacts Customers
 
-The outcome of this event storming exercise was carried out in [Miro](https://miro.com) and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template. The teams determined were more arbitrary than by insight as the organisation does not exist, but they resulted in:
+The outcome of this event storming exercise was carried out in [Miro](https://miro.com) with the basic outcome shown below. 
+
+<img src="img/Miro.PNG"/>
+
+This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template. The teams determined were more arbitrary than by insight as the organisation does not exist, but they resulted in:
 
 - [Product Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/product_team.html)
 - [Conversions Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/conversions_team.html)
@@ -62,7 +66,7 @@ While the aspiration is to be able to localise the noise created by deployments 
 - **call-to-arms-live** - The channel for live issues requiring everyones attention to resolve. **This would be a channel that oncall would be integrated with.**
 - **call-to-arms-dev** - The channel for development issues requiring everyones attention to resolve.
 
-There will be times when a new idea or team is proposed but it may never become a fully fledged team, or has too little information at that point to become part of your team configuration. For these "spike" channels can be created until they are regarded as successful and become true components of your organisation where they will be added to your configuration. These should be monitored and committed or removed as soon as their acceptance or faiure is established.
+There will be times when a new idea or team is proposed but it may never become a fully fledged team, or has too little information at that point to become part of your team configuration. For these, "spike" channels can be created until they are regarded as successful and become true components of your organisation where they will be added to your configuration. These should be monitored and committed or removed as soon as their acceptance or faiure is established.
 
 - **spike-{proposal}** - The channel for all aspects of the new proposal.
 
