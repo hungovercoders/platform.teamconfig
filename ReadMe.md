@@ -165,4 +165,4 @@ You can take this approach to any of the enums you may need to add to the schema
 
 ### How to Style Documentation
 
-If you want to amend the style of the documentation, edit the [docs/docs.css](docs/docs.css) file with the CSS styling you require.
+If you want to amend the style of the documentation, edit the [docs/styles/styles.css](docs/styles/styles.css) file with the CSS styling you require.
