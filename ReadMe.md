@@ -1,4 +1,5 @@
 - [Description](#description)
+- [Why do this?](#why-do-this)
 - [Example Team Implementation](#example-team-implementation)
 - [Example Communication Strategy](#example-communication-strategy)
 - [Dependencies](#dependencies)
@@ -6,27 +7,41 @@
   - [How to Validate Teams Schema](#how-to-validate-teams-schema)
   - [How to Generate Documentation](#how-to-generate-documentation)
   - [How to Add Teams](#how-to-add-teams)
+  - [How to Amend Teams](#how-to-amend-teams)
   - [How to Amend Schema](#how-to-amend-schema)
   - [How to Style Documentation](#how-to-style-documentation)
 
 ## Description
 
-This product aims to programtically create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/).
-From this information and schema the goal is to validate the team setup based on business rules and also create automatic documentation.
-The schema for the teams can be found in [team.schema.json](/teams/schema/team.schema.json) and an example implementation of team in [conversions_team.json](/teams/conversions_team.json).
-The example documentation this produces can be found in [docs/index.html](docs/index.html) to see the raw html, or to see it rendered as it currently is in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html).
+This product aims to programtically create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/) and starting to take into consideration the required layer of abstraction across a multi-vendor ecosystem of tooling as discussed in [project to product](https://projecttoproduct.org/).
+From this information and a schema the goal is to validate the team setup based on business rules and also create automatic documentation.
+The schema for the teams can be found in [team.schema.json](/teams/schema/team.schema.json) and an example implementation of a team in [conversions_team.json](/teams/conversions_team.json).
+The example documentation this codebase produces can be found as raw html in [docs/index.html](docs/index.html), or to see it rendered as it currently is as a webpage in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html). This index page is now a pointer to each individual page, a [search method](https://github.com/griff182uk/teamconfig/issues/3) is on the current issues list along with making the solution easier on the eye.
+
+## Why do this?
+
+- **Abstraction for a Consistent Viewpoint** - In the modern technical ecosystem there are a huge number of tools and vendors. Whether your organisation is going through a slow transition phase from one set of tooling to another, or whether different parts of your organisation use different toolsets permanently, configuration of consistent models of communication, knowledge bases, workloads and team makeup can provide a consistent viewpoint over time despite the upheaval underneath. By keeping the layer of abstraction thin, as per the [schema](/teams/schema/team.schema.json) proposed, then the detail can be held locally and managed by the separate teams. All the local teams have to do is ensure that their schema is maintained and they adhere to the minimal strategic rules proposed centrally (e.g. the [example communication strategy](#example-communication-strategy)).
+- **Programatically Represent your Organisation** - The [team schema](/teams/schema/team.schema.json) can provide the right properties and enums you require for centralising terminology required across your ecosystem that is agnostic to any implementation. It purely represents your organisation and can be called upon when needed. For example a Powershell module (see [open issue](https://github.com/griff182uk/teamconfig/issues/9)) could be added that utilises the schema and ensures only the correct tags are applied to resources either from team name property enums or potentially "cost centre" if this were added to the schema, or anything else relevant. Therefore as an example, regardless of whether your organisation was using AWS, Azure or Google as a cloud vendor, it could still reference the one consistent representation of your organisation via the teamconfig to validate and provide consistency.
+- **Single Point of Responsibility** - A number of organisations document their services and responsibilities in documents that proliferate and that cannot be referenced in code, this makes it difficult to programatically link a team with the code they are maintaining. This leads to difficulty in identifying responsibility lines (e.g. difficulty in tagging consistently as mentioned in point 2) or simply duplication and mistrust as no single source of truth has been committed to.
 
 ## Example Team Implementation
 
-The example team implementation was extracted from performing a simulated event storming exercise on a fictional company that simply:
+The [example team implementation] in this codebase was extracted by performing a simulated event storming exercise on a fictional company that simply:
 
-- Activates Users
+- Activates Accounts
 - Configures Products
 - Generates Leads
 - Evaluates Offline Purchases
+- Contacts Customers
 
-The outcome of this event storming exercise was carried out in [Miro](https://miro.com) and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template.
-This is purely fictional for an example implementation and your teams and bounded context setup would require much further thought and design. For further information on event storming please see [here](https://www.eventstorming.com/) or on domain driven design see [here](https://martinfowler.com/bliki/DomainDrivenDesign.html). Once you have the outcomes from these though the principal of the team API setup proposed in this codebase should still hold true.
+The outcome of this event storming exercise was carried out in [Miro](https://miro.com) and can be found [here](https://miro.com/app/board/o9J_l5MkTHM=/) along with the final groupings of bounded contexts to teams. This was generated from this [Miro Event Storming](https://miro.com/miroverse/event-storming/) template. The teams determined were more arbitrary than by insight as the organisation does not exist, but they resulted in:
+
+- [Product Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/product_team.html)
+- [Conversions Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/conversions_team.html)
+- [CRM Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/crm_team.html)
+- [Platform Team](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/platform_team.html)
+
+This is purely fictional for an example implementation and anything like this should be given great thought, care and collaboration within your organisation. The actual teams and bounded context you setup would require much further thought and design. For further information on event storming please see [here](https://www.eventstorming.com/) or on domain driven design see [here](https://martinfowler.com/bliki/DomainDrivenDesign.html). Once you have the outcomes from these though the principal of the team API setup proposed in this codebase should still hold true.
 
 ## Example Communication Strategy
 
@@ -46,6 +61,10 @@ While the aspiration is to be able to localise the noise created by deployments 
 
 - **call-to-arms-live** - The channel for live issues requiring everyones attention to resolve. **This would be a channel that oncall would be integrated with.**
 - **call-to-arms-dev** - The channel for development issues requiring everyones attention to resolve.
+
+There will be times when a new idea or team is proposed but it may never become a fully fledged team, or has too little information at that point to become part of your team configuration. For these "spike" channels can be created until they are regarded as successful and become true components of your organisation where they will be added to your configuration. These should be monitored and committed or removed as soon as their acceptance or faiure is established.
+
+- **spike-{proposal}** - The channel for all aspects of the new proposal.
 
 An example implementation in slack of what this would look like can be seen below:
 <img src="img/slack.png"/>
@@ -69,12 +88,14 @@ venv\scripts\activate
 
 ### How to Validate Teams Schema
 
-- Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and return the message "Schema validation passed".
+- Within your virtual python environment, open a terminal and run [app/validate.py](app/validate.py). This should produce no errors and evebtually return the message "Schema validation passed".
 
 ```
 (venv) D:\repos\teamconfig>app\validate.py      
 Schema validation passed.
 ```
+
+If there are any legitimate schema errors please fix your team implementation. If you need to add missing enums that are now part of your organisation please go to ["How to Amend Schema"](#how-to-amend-schema).
 
 ### How to Generate Documentation
 
@@ -93,9 +114,12 @@ To preview this on github itself you can use this [example](https://htmlpreview.
 
 ### How to Add Teams
 
-To add a team you need to add information to a team to this folder, following an example of a team already present, that meets the schema schema provided here.
-Once you have added a team you should [validate](#how-to-validate-teams-schema) the teams against the schema again to ensure no rules have been broken.
+To add a team you need to add information to a new team to in the teams folder. You can copy an [example](/teams/conversions_team.json) of a team already present as a good starting point, that meets the [schema](/teams/schema/team.schema.json) provided, rename the file and start amending the schema.
+Once you have added a team you should [validate](#how-to-validate-teams-schema) the teams against the schema again to ensure no rules have been broken. If there are any legitimate schema errors please fix your team implementation. If you need to add missing enums that are now part of your organisation please go to ["How to Amend Schema"](#how-to-amend-schema).
 
+### How to Amend Teams
+
+To amend a team implementation simply open the relevant file in the teams folder, then edit the properties you require ensuring that you adhere to the [schema](/teams/schema/team.schema.json). When complete again perform [validation](#how-to-validate-teams-schema)). If you need to add missing enums that are now part of your organisation please go to ["How to Amend Schema"](#how-to-amend-schema).
 ### How to Amend Schema
 
 You may need to amend the [schema](/teams/schema/team.schema.json)) to meet local needs, particularly the values available in the lookups for different properties.
@@ -137,4 +161,4 @@ You can take this approach to any of the enums you may need to add to the schema
 
 ### How to Style Documentation
 
-If you want to amend the style of the documentation, edit the [docs/docs.css](docs/docs.css) file with the styling you require.
+If you want to amend the style of the documentation, edit the [docs/docs.css](docs/docs.css) file with the CSS styling you require.
