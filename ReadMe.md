@@ -114,7 +114,7 @@ Docs created in docs/product_team.html
 Docs created in docs/index.html
 ```
 
-To preview this on github itself you can use this [example](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/docs.html) to see it in the current repo, or go to [htmlpreview](https://htmlpreview.github.io/) for github.io and enter the URL of your own.
+To preview this on github itself you can use this [example](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html) to see it in the current repo, or go to [htmlpreview](https://htmlpreview.github.io/) for github.io and enter the URL of your own.
 
 ### How to Add Teams
 
