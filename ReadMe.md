@@ -13,7 +13,7 @@
 
 ## Description
 
-This product aims to programtically create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/) and starting to take into consideration the required layer of abstraction across a multi-vendor ecosystem of tooling as discussed in [project to product](https://projecttoproduct.org/).
+This product aims to programmatically create a Teams API for an entire organisation based on the [Team API](https://github.com/TeamTopologies/Team-API-template) put forward by [team topologies](https://teamtopologies.com/) and starting to take into consideration the required layer of abstraction across a multi-vendor ecosystem of tooling as discussed in [project to product](https://projecttoproduct.org/).
 From this information and a schema the goal is to validate the team setup based on business rules and also create automatic documentation.
 The schema for the teams can be found in [team.schema.json](/teams/schema/team.schema.json) and an example implementation of a team in [conversions_team.json](/teams/conversions_team.json).
 The example documentation this codebase produces can be found as raw html in [docs/index.html](docs/index.html), or to see it rendered as it currently is as a webpage in the repo go [here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/griff182uk/teamconfig/master/docs/index.html). This index page is now a pointer to each individual page, a [search method](https://github.com/griff182uk/teamconfig/issues/3) is on the current issues list along with making the solution easier on the eye.
