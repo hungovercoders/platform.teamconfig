@@ -32,8 +32,9 @@ def start_up():
         "stringUtils": stringUtils,
         "fileLoader": fileLoader,
         "teamConfigDataMapper": teamConfigDataMapper,
-        "config": slackConfig,
+        "slackConfig": slackConfig,
         "slackApp": slackManagerApp,
+        "devopsConfig": azDevopsConfig,
         "devopsApp": azDevopsManagerApp,
         "modules": [slackManagerApp, azDevopsManagerApp]
     }
