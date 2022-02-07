@@ -18,9 +18,12 @@ class AzureDevOpsManager(base.Runnable):
         print('Generating Azure DevOps projects..')
 
         organization = self.config.get_config_value('Organisation')
-        baseUrl = f'https://dev.azure.com/{organization}/_apis/projects?api-version=6.0'
+        url = f'https://dev.azure.com/{organization}/_apis/projects?api-version=6.0'
         apiToken = self.config.get_config_value('PAT_TOKEN')
-        headers = {'Authorization': f'Basic {apiToken}'}
+        headers = {
+            'Authorization': f'Basic {apiToken}',
+            'Content-Type': 'application/json'
+        }
         teamsDataPath = os.path.join('teams', '*.json')
         teamsData = self.dataMapper.extract_comms_data_for_medium(teamsDataPath, 'slack')
 
@@ -51,7 +54,7 @@ class AzureDevOpsManager(base.Runnable):
                 print(f'Token used may not have the following scopes configured: vso.project_manage')
                 print('See docs here for further details: https://docs.microsoft.com/en-us/rest/api/azure/devops/core/projects/create?view=azure-devops-rest-6.0#scopes')
                 exit()
-            elif (not response.status_code == 200):
+            elif (not response.ok):
                 print(f'Something went wrong creating {team.name} project. Reason: {response.reason}: {response.text}. Exiting script.')
                 exit()
             else:
