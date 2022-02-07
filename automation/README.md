@@ -70,3 +70,9 @@ We could plumb this script into a CI/CD pipeline that will run everytime the 'te
 ### Notes
 
 At this time, this script doesn't treat this project as declarative. Therefore changes to channel names will result in new channels. How this will work is yet to be decided.
+
+
+
+## TODO: Notes from development to be properly written up
+"6B724908-EF14-45CF-84F8-768B5384DA45" // Uses Agile Scrum template. 
+Other types found here: https://azure.microsoft.com/en-gb/resources/templates/visual-studio-team-services-project-create/

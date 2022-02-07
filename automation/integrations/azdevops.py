@@ -12,14 +12,19 @@ class AzureDevOpsManager(base.Runnable):
         self.dataMapper = dataMapper
 
     def run(self):
-        self.generate_projects()
+        features = self.config['features']
+        moduleConfig = self.config['config']
+        for feature in features:
+            if (feature['name'] == 'projects'):
+                featureConfig = feature['settings']
+                self.generate_projects(moduleConfig, featureConfig)
 
-    def generate_projects(self):
+    def generate_projects(self, moduleConfig, featureConfig):
         print('Generating Azure DevOps projects..')
 
-        organization = self.config.get_config_value('Organisation')
+        organization = moduleConfig['Organisation']
         url = f'https://dev.azure.com/{organization}/_apis/projects?api-version=6.0'
-        apiToken = self.config.get_config_value('PAT_TOKEN')
+        apiToken = moduleConfig['PAT_TOKEN']
         headers = {
             'Authorization': f'Basic {apiToken}',
             'Content-Type': 'application/json'
@@ -38,7 +43,7 @@ class AzureDevOpsManager(base.Runnable):
                         "sourceControlType": "Git"
                     },
                     "processTemplate": {
-                        "templateTypeId": "6B724908-EF14-45CF-84F8-768B5384DA45" # Uses Agile Scrum template
+                        "templateTypeId": featureConfig['type']
                     }
                 }
             }
