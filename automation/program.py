@@ -1,6 +1,6 @@
 import os
 from mappers import mappers
-from integrations import slack, azdevops
+from modules import slack, azdevops
 import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
