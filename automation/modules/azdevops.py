@@ -30,14 +30,14 @@ class AzureDevOpsManager(base.Runnable):
             'Content-Type': 'application/json'
         }
         teamsDataPath = os.path.join('teams', '*.json')
-        teamsData = self.dataMapper.extract_comms_data_for_medium(teamsDataPath, 'slack')
+        projectData = self.dataMapper.extract_project_data(teamsDataPath)
 
-        for team in teamsData:
-            print(f'Generating Azure DevOps project for {team.name}..')
+        for project in projectData:
+            print(f'Generating Azure DevOps project for {project.name}..')
 
             body = {
-                "name": team.name,
-                "description": "This is a new project using the Scrum working process",
+                "name": project.name,
+                "description": project.description,
                 "capabilities": {
                     "versioncontrol": {
                         "sourceControlType": "Git"
@@ -53,16 +53,16 @@ class AzureDevOpsManager(base.Runnable):
             response = requests.post(url, data=bodyJson, headers=headers)
 
             if (not response.status_code == 200 and response.text.__contains__("TF200019")):
-                print(f"Project {team.name} already exists")
+                print(f"Project {project.name} already exists")
                 continue
             elif (response.status_code in (203, 401)):
                 print(f'Token used may not have the following scopes configured: vso.project_manage')
                 print('See docs here for further details: https://docs.microsoft.com/en-us/rest/api/azure/devops/core/projects/create?view=azure-devops-rest-6.0#scopes')
                 exit()
             elif (not response.ok):
-                print(f'Something went wrong creating {team.name} project. Reason: {response.reason}: {response.text}. Exiting script.')
+                print(f'Something went wrong creating {project.name} project. Reason: {response.reason}: {response.text}. Exiting script.')
                 exit()
             else:
-                print(f"Done generating Azure DevOps project for {team.name}.")
+                print(f"Done generating Azure DevOps project for {project.name}.")
 
         print('Azure DevOps projects generated.')
