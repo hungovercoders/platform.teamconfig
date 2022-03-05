@@ -6,6 +6,7 @@ import sys
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 from lib.teamconfig import *
+from createmap import *
 
 build_direction = "LEFT_TO_RIGHT"
 table_attributes = None ## {"style" : "width:100%"}
@@ -56,3 +57,6 @@ with open(f'docs/index.html', 'w') as f:
     f.write(html_main)
 
 print(f'Docs created in docs/index.html')
+
+create_map()
+print(f'Docs created in docs/teamgraph.png')
