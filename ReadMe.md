@@ -79,6 +79,19 @@ An example implementation in slack of what this would look like can be seen belo
 - Pyton Installation
 - [json2table](https://pypi.org/project/json2table/)
 - [jsonschema](https://pypi.org/project/jsonschema/)
+- requests
+- networkx
+
+```bash
+pip install json2table
+pip install jsonschema
+pip install requests
+pip install neworkx
+pip install matplotlib
+pip install scipy
+
+pip list
+```
 
 ## Guide
 

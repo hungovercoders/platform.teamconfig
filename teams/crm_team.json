@@ -102,6 +102,18 @@
                 "Powershell",
                 "Bicep"
             ]
+        },
+        {
+            "name": "Stan",
+            "email": "stan@teamconfig.com",
+            "roles": [
+                "Engineer"
+            ],
+            "skills": [
+                "Powershell",
+                "Terraform",
+                "Bicep"
+            ]
         }
     ],
     "products": [
