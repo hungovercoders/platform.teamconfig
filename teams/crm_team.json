@@ -1,6 +1,7 @@
 {
     "overview": {
         "name": "CRM",
+        "type": "Value",
         "mission": "Increasing number of customer accounts and managing customer relationships with regular and appropriate contact.",
         "current_work": [
             "A/B Testing product renewal emails",

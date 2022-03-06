@@ -1,6 +1,7 @@
 {
     "overview": {
         "name": "Platform",
+        "type": "Platform",
         "mission": "Providing reliable shared infrastructure and repeatable deployment pipelines to improve value stream engineering throughput.",
         "current_work": [
             "Investigating suitable event broker technologies",

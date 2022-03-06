@@ -1,6 +1,7 @@
 {
     "overview": {
         "name": "Conversions",
+        "type": "Value",
         "mission": "Providing users with a view of products to select and track the progress of these leads through to purchase.",
         "current_work": [
             "Investigating API integration with sample of partners for better sales notifications",
@@ -8,7 +9,7 @@
         ],
         "teams_working_with": [
             "CRM",
-            "Product"
+            "Platform"
         ],
         "homepage": "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/homepage.md'>Homepage</a>",
         "backlog": "<a href='https://github.com/griff182uk/teamconfig/projects/3'>Backlog</a>",

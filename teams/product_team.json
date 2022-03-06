@@ -1,6 +1,7 @@
 {
     "overview": {
         "name": "Product",
+        "type": "Value",
         "mission": "Negotiating and providing the most attractive products to the customers of the website.",
         "current_work": [
             "Onboarding a new product from a new partner"

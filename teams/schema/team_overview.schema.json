@@ -52,7 +52,7 @@
         },
         "teamtype_list": {
             "type": "string",
-            "description": "The list of team names as put forward by team topologies.",
+            "description": "The list of team types according to those put forward in team topologies.",
             "enum": [
                 "Platform",
                 "Value",
@@ -82,6 +82,7 @@
             "type": "object",
             "required": [
                 "name",
+                "type",
                 "mission",
                 "current_work",
                 "teams_working_with",
@@ -97,7 +98,7 @@
                 },
                 "type": {
                     "$ref": "#/$defs/teamtype_list",
-                    "description": "The type of team as put forward by team topologies."
+                    "description": "The name of the team according to those put forward in team topologies"
                 },
                 "mission": {
                     "type": "string",
@@ -115,7 +116,9 @@
                     "type": "array",
                     "description": "The list of teams this team works with.",
                     "items": {
+                        "name": {
                             "$ref": "#/$defs/teamname_list"
+                        }
                     },
                     "uniqueItems": true
                 },
