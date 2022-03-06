@@ -127,6 +127,10 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Product Renewal Reminder</a>"
+            ],
+            "events": [
+                "Contact.LeadReminderCommunicationSent",
+                "Contact.ProductExpired"
             ]
         },
         {
@@ -138,6 +142,10 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Abandoned Lead Notifcations</a>"
+            ],
+            "events": [
+                "Contact.AbandonedLead",
+                "Contact.LeadReminderCommunicationSent"
             ]
         }
     ]

@@ -78,10 +78,62 @@
                 }
             ]
         },
+        "teammember_list": {
+            "type": "string",
+            "description": "The list of people who work at the company.",
+            "enum": [
+                "Hicks",
+                "Hudson",
+                "Vasquez",
+                "Drake",
+                "Kyle",
+                "Kenny",
+                "Cartman",
+                "Stan",
+                "Naomi",
+                "Amos",
+                "Holden",
+                "Alex",
+                "Leonardo",
+                "Michaelangelo",
+                "Donatello",
+                "Raphael"
+            ]
+        },
+        "event_list": {
+            "type": "string",
+            "description": "The list of events produced by the company.",
+            "enum": [
+                "User.Activated",
+                "User.Deactivated",
+                "Contact.Activated",
+                "Contact.Deactivated",
+                "Product.Updated",
+                "ProductPanel.Updated",
+                "ProductPanel.Viewed",
+                "ProductLead.Selected",
+                "ProductLead.Failed",
+                "ProductLead.Abandoned",
+                "SalesFile.Received",
+                "SaleIndication.Raised",
+                "Sale.Suspected",
+                "Sale.Confirmed",
+                "ProductLead.SuspectedPurchased",
+                "ProductLead.Purchased",
+                "Contact.Purchased",
+                "Contact.AbandonedLead",
+                "Contact.LeadReminderCommunicationSent",
+                "Contact.ProductExpired",
+                "Contact.RenewalReminderCommunicationSent",
+                "EventBroker.Created",
+                "SchemaRegistry.Created"
+            ]
+        },
         "overview": {
             "type": "object",
             "required": [
                 "name",
+                "type",
                 "mission",
                 "current_work",
                 "teams_working_with",
@@ -242,7 +294,8 @@
                 "purpose",
                 "sla",
                 "customers",
-                "codebase"
+                "codebase",
+                "events"
             ],
             "properties": {
                 "name": {
@@ -282,6 +335,14 @@
                         "type": "string",
                         "description": "The name of the codebase including link.",
                         "pattern": "<a href='.*'>.*</a>"
+                    }
+                },
+                "events": {
+                    "type": "array",
+                    "description": "Events produced by this product",
+                    "uniqueItems": true,
+                    "items": {
+                        "$ref": "#/$defs/event_list"
                     }
                 }
             }

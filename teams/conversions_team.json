@@ -118,6 +118,15 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Product Panel</a>"
+            ],
+            "events": [
+                "ProductPanel.Updated",
+                "ProductPanel.Viewed",
+                "ProductLead.Selected",
+                "ProductLead.Failed",
+                "ProductLead.Abandoned",
+                "ProductLead.SuspectedPurchased",
+                "ProductLead.Purchased"
             ]
         },
         {
@@ -129,6 +138,12 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Sale Tracking</a>"
+            ],
+            "events": [
+                "SalesFile.Received",
+                "SaleIndication.Raised",
+                "Sale.Suspected",
+                "Sale.Confirmed"
             ]
         }
     ]

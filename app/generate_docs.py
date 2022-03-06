@@ -51,7 +51,10 @@ html_main = """<!DOCTYPE html>
 <p>Please click on a team below to see its details</p>
 <ul>
 """ + html_main + """</ul>
+ <h1>Team Members and Relationships Graph</h1>
  <img src="teamgraph.png" alt="Team Graph">
+ <h1>Team Products and Event Responsibilities Graph</h1>
+ <img src="eventgraph.png" alt="Event Graph">
 </body>"""
 
 with open(f'docs/index.html', 'w') as f:

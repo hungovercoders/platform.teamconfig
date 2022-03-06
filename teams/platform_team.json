@@ -115,6 +115,9 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Event Broker</a>"
+            ],
+            "events": [
+                "EventBroker.Created"
             ]
         },
         {
@@ -128,6 +131,9 @@
             ],
             "codebase": [
                 "<a href='https://github.com/griff182uk/teamconfig/blob/master/teamlinks/readme.md'>Schema Registry</a>"
+            ],
+            "events": [
+                "SchemaRegistry.Created"
             ]
         }
     ]
