@@ -50,7 +50,9 @@ html_main = """<!DOCTYPE html>
 <h1>Teams</h1>
 <p>Please click on a team below to see its details</p>
 <ul>
-""" + html_main + "</ul></body>"
+""" + html_main + """</ul>
+ <img src="teamgraph.png" alt="Team Graph">
+</body>"""
 
 with open(f'docs/index.html', 'w') as f:
     f.truncate()
