@@ -5,6 +5,8 @@ import os
 from os import listdir
 from os.path import isfile, join
 import sys
+from pyvis import network as net
+from IPython.core.display import display, HTML
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
@@ -66,9 +68,23 @@ def create_map():
   color_map_events = ['orange' if node in events else 'purple' if node in products else 'green' for node in G_events]
   nx.draw_networkx(G_people,pos=nx.kamada_kawai_layout(G_people),node_color = color_map_people, with_labels=True, node_size=1000)
   plt.savefig("docs/teamgraph.png") 
-  plt.show() 
+  ##plt.show() 
+
+  gp = net.Network(height='100%', width='100%',heading='Team Config Team Relationships')
+  gp.from_nx(G_people)
+  gp.save_graph("docs/teamgraph.html")
+  ##gp.show('docs/teamgraph.html')
+  #display(HTML('docs/teamgraph.html'))
+
   nx.draw_networkx(G_events,pos=nx.kamada_kawai_layout(G_events),node_color = color_map_events, with_labels=True, node_size=1000) 
   plt.savefig("docs/eventgraph.png") 
-  plt.show() 
+  #plt.show() 
+
+  ge = net.Network(height='100%', width='100%',heading='Team Config Event Relationships')
+  ge.from_nx(G_events)
+  ge.save_graph("docs/eventgraph.html")
+  ##ge.show('docs/eventgraph.html')
+  #display(HTML('docs/eventgraph.html'))
+
 create_map()
 

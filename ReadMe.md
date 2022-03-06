@@ -89,6 +89,7 @@ pip install requests
 pip install neworkx
 pip install matplotlib
 pip install scipy
+pip install pyvis
 
 pip list
 ```

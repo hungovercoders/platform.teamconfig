@@ -55,6 +55,10 @@ html_main = """<!DOCTYPE html>
  <img src="teamgraph.png" alt="Team Graph">
  <h1>Team Products and Event Responsibilities Graph</h1>
  <img src="eventgraph.png" alt="Event Graph">
+ <h1>Interactive Team Members and Relationships Graph</h1>
+ <embed type="text/html" src="teamgraph.html" width="800" height="800">
+ <h1>Interactive Team Products and Event Responsibilities Graph</h1>
+ <embed type="text/html" src="teamevents.html" width="800" height="800">
 </body>"""
 
 with open(f'docs/index.html', 'w') as f:

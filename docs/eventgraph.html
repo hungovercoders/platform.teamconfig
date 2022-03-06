@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1>Team Config Event Relationships</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "Platform", "label": "Platform", "shape": "dot", "size": 10, "type": "team"}, {"id": "Event Broker", "label": "Event Broker", "shape": "dot", "size": 10, "type": "product"}, {"id": "Schema Registry", "label": "Schema Registry", "shape": "dot", "size": 10, "type": "product"}, {"id": "CRM", "label": "CRM", "shape": "dot", "size": 10, "type": "team"}, {"id": "Product Renewal Reminders", "label": "Product Renewal Reminders", "shape": "dot", "size": 10, "type": "product"}, {"id": "Abandoned Lead Notifications", "label": "Abandoned Lead Notifications", "shape": "dot", "size": 10, "type": "product"}, {"id": "Product", "label": "Product", "shape": "dot", "size": 10, "type": "team"}, {"id": "Product Configuration Portal", "label": "Product Configuration Portal", "shape": "dot", "size": 10, "type": "product"}, {"id": "Conversions", "label": "Conversions", "shape": "dot", "size": 10, "type": "team"}, {"id": "Product Panel", "label": "Product Panel", "shape": "dot", "size": 10, "type": "product"}, {"id": "Sale Tracking", "label": "Sale Tracking", "shape": "dot", "size": 10, "type": "product"}, {"id": "EventBroker.Created", "label": "EventBroker.Created", "shape": "dot", "size": 10, "type": "event"}, {"id": "SchemaRegistry.Created", "label": "SchemaRegistry.Created", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductPanel.Updated", "label": "ProductPanel.Updated", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductPanel.Viewed", "label": "ProductPanel.Viewed", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductLead.Selected", "label": "ProductLead.Selected", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductLead.Failed", "label": "ProductLead.Failed", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductLead.Abandoned", "label": "ProductLead.Abandoned", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductLead.SuspectedPurchased", "label": "ProductLead.SuspectedPurchased", "shape": "dot", "size": 10, "type": "event"}, {"id": "ProductLead.Purchased", "label": "ProductLead.Purchased", "shape": "dot", "size": 10, "type": "event"}, {"id": "SalesFile.Received", "label": "SalesFile.Received", "shape": "dot", "size": 10, "type": "event"}, {"id": "SaleIndication.Raised", "label": "SaleIndication.Raised", "shape": "dot", "size": 10, "type": "event"}, {"id": "Sale.Suspected", "label": "Sale.Suspected", "shape": "dot", "size": 10, "type": "event"}, {"id": "Sale.Confirmed", "label": "Sale.Confirmed", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.LeadReminderCommunicationSent", "label": "Contact.LeadReminderCommunicationSent", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.ProductExpired", "label": "Contact.ProductExpired", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.AbandonedLead", "label": "Contact.AbandonedLead", "shape": "dot", "size": 10, "type": "event"}, {"id": "Product.Updated", "label": "Product.Updated", "shape": "dot", "size": 10, "type": "event"}, {"id": "User.Activated", "label": "User.Activated", "shape": "dot", "size": 10, "type": "event"}, {"id": "User.Deactivated", "label": "User.Deactivated", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.Activated", "label": "Contact.Activated", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.Deactivated", "label": "Contact.Deactivated", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.Purchased", "label": "Contact.Purchased", "shape": "dot", "size": 10, "type": "event"}, {"id": "Contact.RenewalReminderCommunicationSent", "label": "Contact.RenewalReminderCommunicationSent", "shape": "dot", "size": 10, "type": "event"}]);
+        edges = new vis.DataSet([{"from": "Platform", "to": "Event Broker", "weight": 1}, {"from": "Platform", "to": "Schema Registry", "weight": 1}, {"from": "CRM", "to": "Product Renewal Reminders", "weight": 1}, {"from": "CRM", "to": "Abandoned Lead Notifications", "weight": 1}, {"from": "Product", "to": "Product Configuration Portal", "weight": 1}, {"from": "Conversions", "to": "Product Panel", "weight": 1}, {"from": "Conversions", "to": "Sale Tracking", "weight": 1}, {"from": "Event Broker", "to": "EventBroker.Created", "weight": 1}, {"from": "Schema Registry", "to": "SchemaRegistry.Created", "weight": 1}, {"from": "Product Panel", "to": "ProductPanel.Updated", "weight": 1}, {"from": "Product Panel", "to": "ProductPanel.Viewed", "weight": 1}, {"from": "Product Panel", "to": "ProductLead.Selected", "weight": 1}, {"from": "Product Panel", "to": "ProductLead.Failed", "weight": 1}, {"from": "Product Panel", "to": "ProductLead.Abandoned", "weight": 1}, {"from": "Product Panel", "to": "ProductLead.SuspectedPurchased", "weight": 1}, {"from": "Product Panel", "to": "ProductLead.Purchased", "weight": 1}, {"from": "Sale Tracking", "to": "SalesFile.Received", "weight": 1}, {"from": "Sale Tracking", "to": "SaleIndication.Raised", "weight": 1}, {"from": "Sale Tracking", "to": "Sale.Suspected", "weight": 1}, {"from": "Sale Tracking", "to": "Sale.Confirmed", "weight": 1}, {"from": "Product Renewal Reminders", "to": "Contact.LeadReminderCommunicationSent", "weight": 1}, {"from": "Product Renewal Reminders", "to": "Contact.ProductExpired", "weight": 1}, {"from": "Abandoned Lead Notifications", "to": "Contact.AbandonedLead", "weight": 1}, {"from": "Abandoned Lead Notifications", "to": "Contact.LeadReminderCommunicationSent", "weight": 1}, {"from": "Product Configuration Portal", "to": "Product.Updated", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
