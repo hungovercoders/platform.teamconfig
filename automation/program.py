@@ -21,18 +21,21 @@ def start_up():
 
     appSettings = fileLoader.load_file(os.path.join('automation', 'automation.config.json'))
     modulesSettings = appSettings['modules']
+    modules = []
     
-    slackManagerApp = slack.SlackManagerApp(modulesSettings['slack'], teamConfigDataMapper)
-    azDevopsManagerApp = azdevops.AzureDevOpsManager(modulesSettings['azdevops'], teamConfigDataMapper)
+    if ('slack' in modulesSettings):
+        slackManagerApp = slack.SlackManagerApp(modulesSettings['slack'], teamConfigDataMapper)
+        modules.append(slackManagerApp)
+    
+    if ('azdevops' in modulesSettings):
+        azDevopsManagerApp = azdevops.AzureDevOpsManager(modulesSettings['azdevops'], teamConfigDataMapper)
+        modules.append(azDevopsManagerApp)
     
     return {
         "stringUtils": stringUtils,
         "fileLoader": fileLoader,
         "teamConfigDataMapper": teamConfigDataMapper,
-        "modules": [
-            slackManagerApp, 
-            azDevopsManagerApp
-        ]
+        "modules": modules
     }
 
 def run():
