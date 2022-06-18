@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import sys
+import base64
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 import base
@@ -24,9 +25,13 @@ class AzureDevOpsManager(base.Runnable):
 
         organization = moduleConfig['Organisation']
         url = f'https://dev.azure.com/{organization}/_apis/projects?api-version=6.0'
-        apiToken = moduleConfig['PAT_TOKEN']
+        patToken = moduleConfig['PAT_TOKEN']
+        authorizationToken = ":" + patToken
+        encodedAuthorizationTokenBytes = base64.b64encode(authorizationToken.encode("utf-8"))
+        encodedAuthorizationToken = str(encodedAuthorizationTokenBytes, "utf-8")
+
         headers = {
-            'Authorization': f'Basic {apiToken}',
+            'Authorization': f'Basic {encodedAuthorizationToken}',
             'Content-Type': 'application/json'
         }
         teamsDataPath = os.path.join('teams', '*.json')
