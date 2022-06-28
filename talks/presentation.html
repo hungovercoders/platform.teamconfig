@@ -42,7 +42,6 @@
   <body>
     <textarea id="source">
 
----
 
 class: middle, center
 
@@ -71,6 +70,15 @@ class: middle, center
 
 ???
 
+Talk about why teams are important first and how they are just as important as your technical boundaries.
+This will lead us into why we think its important to store your team as configuration, allowing you to define
+what a team is and automatically deploy required assets.
+Using this simple schema and values entered to generate team documentation and create a graph model to analyze
+off the back of it. 
+Anil to talk about offering team components as a service and how this can be automated. 
+Then a Demo setting up comms and repository base for a team automatically based off the schema.
+Then talk about why we would want to use this tooling and ideas for what else we could use it for. 
+
 ---
 
 # Importance of Teams
@@ -80,6 +88,9 @@ Lets begin at the beginning...
 **Conways Law...**
 
 ???
+
+Hands in the air who's heard of conways law? 
+Ok those of you with your hands in the air will know why the next slide is needed...
 
 ---
 
@@ -135,19 +146,26 @@ Melvin E. Conway 1968
 
 ## Why create a team?
 
+???
+
+We need to understand this fundamental question before we get into the complexities of multiple teams
+and considering their interactions.
+
+---
+
+# Importance of Teams
+
+## Why create a team?
+
+* Large numbers of staff cannot communicate well, therefore teams will have a finite number of staff.
+
 * Teams are setup so that members can collaborate easily on a problem.
 
-* Teams will have a finite number of staff.
+* Teams can have some focus on common internal team priorities. 
 
-* Teams will have common internal team priorities. 
+* Teams can have common communication ceremonies. 
 
-* Teams will have common communication ceremonies. 
-
-* Teams will require common rights and tooling to a team common environment.
-
-* **Teams allow for multi-threaded organizational goals to be achieved.**
-
-* **In order to take advantage of multiple threads handovers should be limited.**
+* Teams can have common rights and tooling to a team common environment.
 
 ???
 
@@ -157,17 +175,45 @@ These pockets of people have a finite number of people so as to avoid too many p
 and having too many tasks conflicting with each other.
 Ideally these teams would be able to meet the tasks they are given which reflect the internal team priorities.
 
-The reason that a company setups teams is therefore so they can break down manageable workloads and distribute them amongst an organization. 
-This allows an organization to have multiple threads at any one time if tasks are distributed and managed correctly. 
+You know what its like with scrum teams, once you get to a certain number of people above say 5-8, there is
+a lot of irrelevant chatter and priorities become difficult to distinguish.
+You go from a focal point of desired business value to far too many threads on a single node of your business 
+that cannot complete. 
 
 ---
 
 # Importance of Teams
 
-* Q1. If **Jim** is in a team with **Alex** and not in a team with **Rodney**, who is it likely that **Jim** is going to work with more often?
+## Why create a team?
+
+* Teams are setup so that members can collaborate easily on a problem.
+
+* Large numbers of staff cannot communicate well, therefore teams will have a finite number of staff.
+
+* Teams can have some focus on common internal team priorities. 
+
+* Teams can have common communication ceremonies. 
+
+* Teams can have common rights and tooling to a team common environment.
+
+* **Teams allow for multi-threaded organizational goals to be achieved.**
+
+* **In order to take advantage of multiple threads handovers should be limited.**
 
 
-* Q2. If **Rodney** is in a team with **Jasmine** and not in a team with **Jim**, who is it likely that **Rodney** going to work with more often?
+???
+
+The reason that a company setups teams is therefore so they can break down manageable workloads and distribute them amongst an organization. 
+This allows an organization to have multiple threads at any one time if tasks are distributed and managed correctly. 
+
+You go from a focal point of desired business value to far too many threads on a single node of your business 
+that cannot complete. 
+
+---
+
+# Importance of Teams
+
+* Q. If **Jim** is in a team with **Alex** and not in a team with **Rodney**, who is it most likely that **Jim** is going to work with more often, **Alex** or **Rodney**?
 
 
 <html>
@@ -178,14 +224,41 @@ This allows an organization to have multiple threads at any one time if tasks ar
 
 ???
 
+---
+# Importance of Teams
 
+* Q. If **Jim** is in a team with **Alex** and not in a team with **Rodney**, who is it likely that **Jim** is going to work with more often, **Alex** or **Rodney**?
+
+Answer: **Alex**
+
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BasicTeamCommJim.png" width="90%" height="60%" />
+</div>
+</html>
+
+???
+
+Answer is Alex.
+Same team as Jim, therefore common ceremonies, common priorities, likely to work together more. 
 
 ---
 # Importance of Teams
 
-* Q1. If **Jim** is in a team with **Alex** and not in a team with **Rodney**, who is it likely that **Jim** is going to work with more often?
+* Q. If **Rodney** is in a team with **Jasmine** and not in a team with **Jim**, who is it likely that **Rodney** going to work with more often, **Jasmine** or **Jim**?
 
-Answer: **Alex**
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BasicTeams.png" width="90%" height="60%" />
+</div>
+</html>
+
+???
+
+---
+# Importance of Teams
 
 * Q2. If **Rodney** is in a team with **Jasmine** and not in a team with **Jim**, who is it likely that **Rodney** going to work with more often?
 
@@ -193,20 +266,90 @@ Answer: **Jasmine**
 
 <html>
   <div style="text-align: center;">
-<img src="images/BasicTeamComm.png" width="90%" height="60%" />
+<img src="images/BasicTeamCommRodney.png" width="90%" height="60%" />
 </div>
 </html>
 
 ???
 
-Rodney is the best example to focus on here.
+Rodney is a good example to focus on here.
 At first it might seem that well people will speak to one another anyway and this is an easy thing to overcome... 
 but there are two opposing forces against Rodney speaking with Alex for example.
 It is not just the fact that Alex is in a different team, but Rodney is in his own team. Each team having their own internal priorities 
 and ceremonies and methods etc means that it is never easy to speak to members in other teams, particularly if this is exarcebated
 by team members constantly having to speak to multiple other teams. The drag can become immense. 
-This may seem obvious, but all the communication pathways multiplied across every individual mean that communication within a team should be far easier
+So you have internal forces - e.g. meeting coordination, at conflict with meeting coordination in another team.
+This may seem obvious, but all the communication pathways multiplied across every individual mean that communication 
+within a team should be far easier
 than across teams.
+
+---
+# Importance of Teams
+
+* Q2. If **Rodney** is in a team with **Jasmine** and not in a team with **Jim**, who is it likely that **Rodney** going to work with more often?
+
+Answer: **Jasmine**
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BasicTeamCommRodney.png" width="90%" height="60%" />
+</div>
+</html>
+
+* **Internal team communication & methods pull you in, separate team communication & methods pull others away**
+* **Consideration therefore should be taken when designing parallel team threads**
+
+???
+
+Rodney is a good example to focus on here.
+At first it might seem that well people will speak to one another anyway and this is an easy thing to overcome... 
+but there are two opposing forces against Rodney speaking with Alex for example.
+It is not just the fact that Alex is in a different team, but Rodney is in his own team. Each team having their own internal priorities 
+and ceremonies and methods etc means that it is never easy to speak to members in other teams, particularly if this is exarcebated
+by team members constantly having to speak to multiple other teams. The drag can become immense. 
+So you have internal forces - e.g. meeting coordination, at conflict with meeting coordination in another team.
+This may seem obvious, but all the communication pathways multiplied across every individual mean that communication 
+within a team should be far easier
+than across teams.
+
+---
+
+# Importance of Teams
+
+If Jim needs something from Marge, and Marge needs something from Satya...
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BasicTeams.png" width="90%" height="60%" />
+</div>
+</html>
+
+???
+
+---
+
+# Importance of Teams
+
+If Jim needs something from Marge, and Marge needs something from Satya...
+The lead time to unblock Jim will be something like:
+
+```
+[lead time for two team communication] = 
+
+[mean time for team 2 to acknowledge request] 
++ [mean time for team 2 to understand request] 
++ [mean time for team 2 to prioritize request] 
+
+```
+...
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BasicTeamsCommCross.png" width="90%" height="60%" />
+</div>
+</html>
+
+???
 
 ---
 
@@ -250,6 +393,9 @@ The lead time to unblock Jim will be something like:
 
 ???
 
+Based on the lead time we just established, people will try and solve the problem, or a problem locally.
+This may not be the problem that needs to be solved but being engineers we will solve it nonetheless. 
+
 ---
 
 # Importance of Teams
@@ -285,9 +431,38 @@ The lead time to unblock Jim will be something like:
 
 # Importance of Teams
 
-## So we can conclude...
+* Some problems may, for example, still require data skills as a focus.  
+* However, the teams should always be built around a business problem and not be led with a functional solution.
+* The skills are then organic attributes of a team out of solving a business problem, and not mandated with team inception, allowing for evolution.
+
+<html>
+  <div style="text-align: center;">
+<img src="images/BaicTeamLovelyProblemGoodValueData.png" width="70%" height="40%" />
+</div>
+</html>
+
+
+???
+
+---
+
+# Importance of Teams
+
+## So are we happy to conclude..
 
 ### Just as much thought should go into our communication structure and teams, as that is given to our technical architecture
+
+???
+
+---
+
+# Importance of Teams
+
+## So are we happy to conclude..?
+
+### Just as much thought should go into our communication structure, and teams, as that is given to our technical architecture
+
+#### For tonight we are! :D 
 
 <html>
   <div style="text-align: center;">
@@ -295,7 +470,14 @@ The lead time to unblock Jim will be something like:
 </div>
 </html>
 
-### Therefore why not store teams configuration as code...?
+
+???
+
+---
+
+# Importance of Teams
+
+## Therefore why not store teams configuration as code...?
 
 ???
 
@@ -305,8 +487,8 @@ The lead time to unblock Jim will be something like:
 
 ## Designing teams is not simple
 
-* Teams may own multiple domains and products
-* Techniques such as event storming help us understand business problems and appropriate domain boundaries
+* Teams can own multiple domains and products
+* Techniques such as [event storming](https://miro.com/app/board/o9J_l5MkTHM=/) help us understand business problems and appropriate domain boundaries
 
 <html>
   <div style="text-align: center;">
@@ -320,7 +502,7 @@ The lead time to unblock Jim will be something like:
 
 # Teams Configuration
 
-## Store Teams Design as Code
+## Store Teams Design as [Code](../teams)
 
 <html>
   <div style="text-align: center;">
@@ -356,7 +538,7 @@ Can control properties such as expected values in enum list or maximum number of
 
 ...
 
-### Each team can control their own properties
+### Each team can control their own properties in a common schema
 
 ???
 
